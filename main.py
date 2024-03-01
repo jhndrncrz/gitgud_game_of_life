@@ -30,7 +30,7 @@ colors = {
 #
 # branch: implement colors feature
 #       (done) commit: add ansi colors dictionary
-#       commit: add one color to all cells
+#       (done) commit: add one color to all cells
 #       commit: add random color to every cell
 #
 # branch: implement iteration counter
@@ -49,7 +49,7 @@ def create_grid(rows: int, columns: int) -> list[list[int]]:
 def print_grid(grid: list[list[int]]) -> None:
     os.system('clear' if os.name == 'posix' else 'cls')
     for row in grid:
-        print(' '.join([f'{colors["RED"]}*' if cell else ' ' for cell in row]))
+        print(' '.join([f'{colors[random.choice(list(colors.keys()))]}*\033[0m' if cell else ' ' for cell in row]))
     print('\n')
 
 def get_neighbors(grid: list[list[int]], row: int, column: int):

@@ -1,1 +1,0 @@
-We don't really need this file. This will only be used to demonstrate git rm, and restoring files from other branches for accidental deletes.

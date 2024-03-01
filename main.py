@@ -34,8 +34,8 @@ colors = {
 #       commit: add random color to every cell
 #
 # branch: implement iteration counter
-#       commit: add iteration counter
-#       commit: center iteration counter
+#       (done) commit: add iteration counter
+#       (done) commit: center iteration counter
 # 
 # commit: remove file.txt
 # commit: retrieve file.txt from previous commit
@@ -74,11 +74,14 @@ def update_grid(grid):
 
 def game_of_life(rows: int, columns: int):
     grid: list[list[int]] = create_grid(rows, columns)
-
+    counter: int = 0
+    padding: int = ((columns * 2) - 2 - len(f"ITERATION {counter}")) // 2
     while True:
         print_grid(grid)
+        print(f"{" " * padding}ITERATION {counter}{" " * padding}")
         grid = update_grid(grid)
         time.sleep(0.25)
+        counter += 1
 
 def main():
     rows: int = int(input("Enter rows: "))

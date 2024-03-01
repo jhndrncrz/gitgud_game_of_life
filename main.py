@@ -25,7 +25,7 @@ import time
 # rebase colors branch
 
 def create_grid(rows: int, columns: int) -> list[list[int]]:
-    return [[random.choice([0, 2]) for _ in range(columns)] for _ in range(rows)]
+    return [[random.choice([0, 1]) for _ in range(columns)] for _ in range(rows)]
 
 def print_grid(grid: list[list[int]]) -> None:
     os.system('clear' if os.name == 'posix' else 'cls')

@@ -17,6 +17,9 @@ import time
 # branch: implement iteration counter
 #       commit: add iteration counter
 #       commit: center iteration counter
+# 
+# commit: remove file.txt
+# commit: retrieve file.txt from previous commit
 #
 # merge iteration counter branch
 # rebase colors branch

@@ -2,23 +2,24 @@ import random
 import os
 import time
 
-# 1. branch: fix bug
+## TODO
+# branch: fix bug
+# merge fix bug branch
 #
-# 2. branch: implement colors feature
+# commit: allow user input for board size
+# commit: add validation for inputs
+#
+# branch: implement colors feature
 #       commit: add ansi colors dictionary
 #       commit: add one color to all cells
 #       commit: add random color to every cell
 #
-# 3. branch: implement iteration counter
+# branch: implement iteration counter
 #       commit: add iteration counter
 #       commit: center iteration counter
 #
-# 4. merge fix bug branch
-# 5. rebase colors branch
-# 6. merge interation counter branch
-#
-# 7. commit: allow user input for board size
-# 8. commit: add validation for inputs
+# merge iteration counter branch
+# rebase colors branch
 
 def create_grid(rows: int, columns: int) -> list[list[int]]:
     return [[random.choice([0, 2]) for _ in range(columns)] for _ in range(rows)]

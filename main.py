@@ -3,8 +3,8 @@ import os
 import time
 
 ## TODO
-# branch: fix bug
-# merge fix bug branch
+# (done) branch: fix bug
+# (done) merge fix bug branch
 #
 # commit: allow user input for board size
 # commit: add validation for inputs
@@ -62,7 +62,9 @@ def game_of_life(rows: int, columns: int):
         time.sleep(0.25)
 
 def main():
-    game_of_life(20, 40)
+    rows: int = int(input("Enter rows: "))
+    columns: int = int(input("Enter columns: "))
+    game_of_life(rows, columns)
 
 if __name__ == '__main__':
     main()

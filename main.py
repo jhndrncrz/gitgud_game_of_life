@@ -29,7 +29,7 @@ colors = {
 # (wag na!) commit: add validation for inputs
 #
 # branch: implement colors feature
-#       commit: add ansi colors dictionary
+#       (done) commit: add ansi colors dictionary
 #       commit: add one color to all cells
 #       commit: add random color to every cell
 #
@@ -49,7 +49,7 @@ def create_grid(rows: int, columns: int) -> list[list[int]]:
 def print_grid(grid: list[list[int]]) -> None:
     os.system('clear' if os.name == 'posix' else 'cls')
     for row in grid:
-        print(' '.join(['*' if cell else ' ' for cell in row]))
+        print(' '.join([f'{colors["RED"]}*' if cell else ' ' for cell in row]))
     print('\n')
 
 def get_neighbors(grid: list[list[int]], row: int, column: int):
